@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf-8">
   <link rel="stylesheet" href="styles.css"/>
+  <meta name="viewport" content="initial-scale=1"/>
   <title>Reservia - prototype</title>
   <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet'/>  
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
@@ -11,16 +12,19 @@
 <body>
     <div id="bloc-page">
       <header>
-          <div id="Reservia">
-          <img src="images/logo/Reservia@3x.png" alt="logo Reservia">
-          </div>
-          <nav>
-              <ul>
-                  <li><a href="Hébergements">Hébergements</a></li>
-                  <li><a href="Activités">Activités</a></li>
-                  <li><a href="S'inscrire">S'inscrire</a></li>
-              </ul>
-          </nav>
+            <div id=teteportable>
+            <div id="logo">
+                    <img src="images/logo/Reservia@3x.png" alt="logo Reservia"></div>
+            <div id="insription">
+                <a class="menu3" href="#">S'inscrire</a>
+            </div>
+            </div>
+            <div id="menu">
+                <a class="menu1" href="#">Hébergements</a>
+                <a class="menu2" href="#">Activités</a>
+            </div>
+            
+        
       </header>
 
 <!--section Trouver votre hébergement...-->
@@ -28,17 +32,16 @@
           <h1>Trouver votre hébergement pour des vacences de rêve</h1>
           <p>En plein centre de ville ou en plaine nature</p>
           
-          <div id="rechercher">
-              <p><i class="fas fa-map-marker-alt fa-1x"></i> 
-                  <label for="Rechercher"></label>
-                  <input type="search" id="search" placeholder="Marseille, France"/>
-                  <button id="boutton">Rechercher</button>
-              </article>      
-          </div>
+          <div id="recher">
+            <div id="icone"><i class="fas fa-map-marker-alt fa-1x"></i></div> 
+            <div id="rechercher"><input class=intrechercher type="search" placeholder="Marseille, France"/></div>
+            <div id="boutton"><i class="fas fa-search"></i></div>
+         </div>
+        </section>
 
 <!--filtres-->
-      <div id="filtres">
-          <h2>Filtres</h2>
+      <div id="filtres filtresmobile">
+          <h2 class="h2">Filtres</h2>
 
           <table id="economique">
           <tr>
@@ -72,25 +75,34 @@
       <div id=info><p><i class="fas fa-info-circle"></i>
           Plus que 500 logements sont disponible dans cette ville</p>
       </div>
-      </section>
+     
 
-<!--hébergement à Marseille-->
-<section id="marseille"
-<h1>Hébergements à Marseille</h1>
 
-<div id="heb1">
-  <article id=heb1>
-      <img id="marcus" src="C:\Users\zuzan\Desktop\OC\projet2 reservia\images\hebergements\4_small\marcus-loke-WQJvWU_HZFo-unsplash.jpg"alt="photo hebergement"/>
-      <div id=description>
-      <h3>Auberge la Cabbanière</h3>
-      <p>Nuit à partir de 25€</p>
-      <div id=notation><p id=etoiles>&#x2605 &#x2605 &#x2605 &#x2605</p><p id=etoiles_vide>&#x2605</p></div>
-      </div>
-  </article>
+      
+<footer id="filtresmobile">
+    <div id="footer1">
+    <h2 class="h2">A propos</h2>
+        <p>Fonctionnement du site</p>
+        <p>Conditions générales de vente</p>
+        <p>Données et confidentialité</p>
+    </div>
+    
+    <div id="footer2">
+    <h2>Nos hébergements</h2>
+        <p>Charte qualité</p>
+        <p>Soumettre votre hôtel</p>
+    </div>
+
+    <div id="footer3">
+    <h2>Assistance</h2>
+        <p>Centre d'aide</p>
+        <p>Nous contacter</p>
+    </div>
+
+    
+
+</footer>
 </div>
-      
-
-      
 </body>
 
 </html>
