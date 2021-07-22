@@ -1,196 +1,439 @@
-@font-face
-{
-  font-family: "releway", Arial, Helvetica, sans-serif;
-  src: url(raleway);
-}
-
+/*par defaut mobil first*/
 body
-{
-    max-width: 1440px;
-    margin: auto;
-    font-family: Raleway;
-    font-weight: normal;
-    font-size: 15px;
-    padding: 35px;
-    font-weight: normal;
-    box-sizing: border-box;
+{margin: 0;
+ font-family: raleway, sans-serif;}
+
+p
+{letter-spacing: 0,2px;
+font-size: 12px;
+font-weight: 600;}
+
+.txt
+{font-size: 15px;
+font-weight: 800;
 }
 
- header
- {
-padding-inline-end: 15px;
- }
+/* header */
+ .menu
+ {display: grid;
+grid-template-columns: 1fr 1fr;
+grid-template-rows: 1fr 1fr;
+padding-top: 30px;
+height:100px;
+font-size: 13px;
+font-weight: 500;}
 
-#teteportable
-    {
-    display: flex;
-    justify-content: space-between;  
-    align-items: flex-end; 
-    line-height: 45px;
-    padding-right: 10px;
-    }
- 
-#logo
-{
-    width: 150px;
-    height: 45px;
-    float: left;
-    padding-top: 5px;
-    display: flex;
-    justify-content: left;
-    align-items: left;
-}
+/*Logo*/
+nav:nth-child(1)
+{grid-column: 1;
+ grid-row: 1;
+ align-items: center;}
 
-#menu
-{
-    height: 45px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    text-align: center;
-    padding-inline-start: 5px;
-}
+.logo
+{height: 30px;
+ width: 105px;}
 
-#insription
-{
-   height: 45px;
-   display: flex;
-    justify-content: space-between;
-    text-align: flex-end; 
-}
+/*Hébergements*/ 
+nav:nth-child(2) 
+{grid-column: 1;
+ grid-row: 2;
+ align-items: center;
+text-align: center;}
 
-.menu1
-{
- color: #0065FC;
- height: 25px;
- font-weight: 1em;
+ .menu1
+{color: #0065fc;
+ font-weight: 700;
+ font-size: 12px;
  text-decoration: none;
- border-bottom:  1px solid #0065FC;
- width: 50%;
- }
+ padding-bottom: 15px;
+ width: 50%;}
+
+#hovermenu1:hover
+ {border-bottom: 3px solid #0065FC;
+  padding-bottom: 15px;}
+
+ /*Activités*/
+ nav:nth-child(3) 
+{grid-column: 2 ;
+ grid-row: 2 ;
+ align-items: center;
+ text-align: center;}
 
 .menu2
-{
- color: black;
- height: 25px;
- font-weight: 1em;
-  text-decoration: none;
-  border-bottom:  1px solid gray;
-  width: 50%;
- }
+{ color: black;
+ font-weight: 600;
+ font-size: 12px;
+ text-decoration: none;
+ padding-bottom: 15px;
+ width: 50%;}
 
- .menu3
-{
- color: #0065FC;
+ #hovermenu2:hover
+ {border-bottom: 3px solid #f2f2ff;
+ padding-bottom: 15px;}
+
+ /*Inscription*/
+ nav:nth-child(4) 
+{grid-column: 2 ;
+ grid-row: 1 ;
+ align-items: center;
+ text-align: end;}
+
+.menu3
+{color: #0065FC;
  font-weight: bolder;
  text-decoration: none;
- line-height: 45px;
-}
+ padding-top: 40px;}
 
-/* rechercher*/
+ /* rechercher*/
+section
+{padding-left: 20px;}
+
+.txttitre
+{padding-right: 90px;
+ font-weight: 800;
+ font-size: 18px;
+ word-spacing:0.2em;
+text-align: left;}
+
 #recher
-{
-    width: 100%;
-    height: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-right: auto;   
-    border-radius: 10px 10px 10px 10px;   
-}
+{padding-top: 25px;
+ display: flex;
+ justify-content: stretch;
+ height: 50px;
+ width: 334px;
+ border-radius: 10px 10px 10px 10px;  
+ padding-right: 20px;
+padding-bottom: 26px;}
 
+/*icone map*/
 #icone
-{
-    height: 50px;
-    width: 50px;
-    border-radius: 10px 0 0 10px;
-    background-color: gray;
-    display: flex;
-    justify-content:center;
-    align-items: center;
- }
+{height: 50px;
+ width: 50px;
+ border-radius: 15px 0 0 15px;
+ background-color: #f2f2f2;
+ display: flex;
+ justify-content:center;
+ align-items: center;}
 
-#rechercher
-{
-    width: 80%;
-    height: 48px;
-    padding-left: 10px;
-    border: 1px solid gray;
-    border-right: none;
-    display: flex;
-    justify-content:left;
-    align-items: center;
-}
+ #rechercher
+{height: 50px;
+ width: 233px;
+ border: 1px solid #f2f2f2;
+ border-right: none;
+ display: flex;
+ justify-content:center;
+ align-items: center;}
+
 .intrechercher
 {border: none;}
 
 ::placeholder
-{
-    font-size: 18px;
-    font-weight: extra bolder;
-    color: black;
-}
+{font-size: 15px;
+ font-family: raleway;
+ font-weight: 800;
+ color: black;
+ padding-left: 10px;}
 
-#boutton
-{
-    font-size: 18px;
-    font-weight: bold;
-    background-color: blue;
-    border-radius: 10px 10px 10px 10px;
-    width: 50px;
-    height: 50px; 
-    display: flex;
-    justify-content:center;
-    align-items: center; 
-    text-align: center;  
-}
+/*button de recherche*/
+#iconrecher
+{font-size: 18px;
+ font-weight: 0.2em;
+ color: white;
+ background-color:#0065FC;
+ border: none;
+ border-radius: 15px 15px 15px 15px;
+ width: 50px;
+ height: 50px; 
+ display: flex;
+ justify-content:center;
+ align-items: center; 
+ text-align: center;}
 
+ #textrecher
+ {display: none;
+font-family: raleway;
+font-weight: 600;
+font-size: 11px;}
+    
+#hbutton :hover
+{background-color: violet;
+ border: none; }
+      
 /*filtres */
-.filtres
+#filtres
 {
-display: flex;  
-justify-content: space-around;
-line-height: 20%;
-}
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+text-align: center;
+font-size: 7px;
+font-weight: 350;}
 
-#tab11, #tab12, #tab13, #tab14
-{
-    margin: 0;
-    background-color:#E4EFFF;
-    border:1px solid #9FC6FF;
-    width: 50px;
-    border-radius:50% 50%;
-    text-align: center;
-}
+.h-icone
+{color: #0065FC;
+ background-color:#E4EFFF;
+ height: 50px;
+ width: 50px;
+ border-radius: 100%;
+ display: flex;
+ justify-content:center;
+ align-items: center;}
 
-#economique, #familial, #romantique, #animaux
-    {
-    margin:0;
-    padding-right: 20px;
-    background-color: transparent;
-    border: 1px solid black;
-    width: auto;  
-    border-style: solid;
-    border-color: black;
-    border-radius: 50px 50px 50px 50px;
-}
+ .h-text
+{padding-left: 15px;
+ padding-right: 20px;
+ font-size: 12px;
+font-weight: 800;}
+
+#ecofam
+{display: flex;
+justify-content: left;}
+
+ #economique
+{height: 50px;
+ width: fit-content;
+ border: 3px solid #f2f2f2;
+ border-radius: 45px 45px 45px 45px;
+ border-left: transparent;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ margin-bottom: 15px;
+ margin-right: 10px;}
+
+#familial
+{height: 50px;
+ width: fit-content;
+ border: 3px solid #f2f2f2;
+ border-radius: 35px 35px 35px 35px;
+ border-left: transparent;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ margin-bottom: 15px;}
+
+#romantique
+{height: 50px;
+ width: fit-content;
+ border: 3px solid #f2f2f2;
+ border-radius: 35px 35px 35px 35px;
+ border-left: transparent;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ margin-bottom: 15px;}
+
+#animaux
+{height: 50px;
+ width: fit-content;
+ border: 3px solid #f2f2f2;
+ border-radius: 35px 35px 35px 35px;
+ border-left: transparent;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ padding-right: 10px;
+ margin-bottom: 15px;}
+    
+.h-text
+{height: 40px;
+ display: flex;
+ justify-content:left;
+ align-items: center;
+ padding-right: 15px;
+ padding-left: 15px;}
+
+/*hover survol*/    
+.h-icone:hover
+{background-color: darkblue}
 
 /*info*/
 #info
-{
-    display: block;
+{display: flex;
+ justify-content: start;
+ align-items: flex-start;
+ padding-top: 15px;
+ padding-bottom: 20px;}
+
+#iconeinfo
+{color: #0065FC;
+ border: solid 0.5px #f2f2f2;
+ height: 15px;
+ width: 15px;
+ text-align: justify;
+ font-size: 9px;
+ border-radius: 100%;
+ display: flex;
+ justify-content: center;
+ align-items: center;}
+    
+#textinfo
+{display: flex;
+ justify-content: start;
+ align-items: flex-start;
+ margin-top: 0px;
+ padding-left: 10px;
+ padding-right: 80px;
+font-size: 12px;
+font-weight: 550;}
+
+/*les plus populaire*/
+#pluspop
+{width: auto;
+ background-color:#f2f2f2;
+ padding-left: 20px;
+ padding-bottom: 26px;
+ margin-block-end: 20px;
+ text-align: left;}
+
+#iconechart
+{padding-right: 20px;
+padding-top: 15px;}
+
+#pop
+{display: flex;
+ justify-content: space-between;
+ font-size: 12px;
+ letter-spacing: -1px;
+margin-top: 2em;}
+
+.blocimage
+{max-width: 127px;
+ height: 136px;
+ display: flex;
+ border-radius: 25px 0 0 25px;
+ padding: 5px;}
+
+.blocpop
+{width: 335px;
+ height: 145px;
+ display: flex;
+ justify-content:left;
+ align-items: flex-start;
+ background-color: white;
+ text-align: left;
+ margin-right: 15px;
+ border-radius: 20px 20px 20px 20px;}
+
+.bloctext
+{height: 145px;
+ width: 205px;
+ display:inline-block;
+ text-align: left;
+ padding-left: 16px;
+padding-top: 15px;
+padding-right: 20px;}
+
+.etoiles
+{display:block;
+ text-align: left;
+ justify-content: left;}
+
+ .ulpop
+ {list-style: none;
+  display: flex;
+  justify-content: left;
+  align-items: flex-start;
+  text-align: left;
+  padding-left: 0px;
+ margin-top: 3em;
+ }
+ ul
+{list-style: none;
+ display: flex;
+ justify-content: left;
+ align-items: flex-start;
+ text-align: left;
+ padding-left: 0px;
+margin-top: 0.2em;
+margin-bottom: 0.2em;}
+
+ /*Hébergement à Marseille*/
+ .hebmarseille
+ {width: 370px;
+border-radius: 15px 15px 15px 15px;
+padding-bottom: 5px;
+align-items: center;
+box-shadow: inset 0 0 1em #f2f2f2, 0 0 0.5em red;}
+
+.cardheb
+{width: 365px;
+height: 200px;
+display: flex;
+flex-direction: column;
+justify-content:left;
+background-color: white;
+margin-right: 15px;
+border-radius: 20px 20px 20px 20px;}
+
+.bloctextheb
+{text-align: left;
+padding-left: 20px;
 }
+
+.titreheb
+{font-size: 15px;
+font-weight: 800;
+letter-spacing: -0.02em;
+}
+
+.prixheb
+{font-size: 12px;
+font-weight: 400;
+margin-top: 0.4em;
+margin-bottom: 0.2em;
+}
+
+.euro
+{font-weight: 700;}
+
+.photoheberg
+{width: 360px;
+ height: 115px;
+ border-radius: 25px 25px 0 0 ;
+ padding: 5px;}
+
+ /*Activité*/
+
+ .photoactivite
+{width: 370px;
+ height: 135px;
+ border-radius: 25px 25px 0 0 ;
+ }
+
+ #activite1
+{width: 370px;
+height: 190px;
+display: flex;
+flex-direction: column;
+background-color: white;
+margin-right: 15px;
+border-radius: 25px 25px 25px 25px;
+box-shadow: inset 0 0 1em #f2f2f2, 0 0 0.5em red;
+}
+
+.titreactiv
+{font-size: 11px;
+font-weight: 700;
+padding-left: 20px;
+margin-top: 20px;
+margin-bottom: 20px;}
 
 /* footer*/
 footer
-{
-    height: 500px;
-    background-color:grey;
-    padding-top: 50px;
-    padding-left: 30px;
-    padding-right: 40px;
-    display: flex;
-    flex-direction: column;
-    justify-content: left;
-    align-items: left;    
-}
+{height: auto;
+ background-color:#f2f2f2;
+ padding-top: 30px;
+ padding-left: 30px;
+ padding-right: 40px;
+font-size: 11px;}
+
+#footer1, #footer2, #footer3
+{display: flex;
+ flex-direction: column;
+ justify-content:left;
+ align-items: flex-start;
+ text-align: left;
+ padding-bottom: 40px;
+ line-height:5%;} 
+
